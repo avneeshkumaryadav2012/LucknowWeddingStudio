@@ -1,0 +1,47 @@
+// Reservations Block with Booking Form
+.reservations-block {
+  background: url(/img/pw-maze-white.png) 0 0 repeat $grey;
+  .field {
+    width: 100%;
+    padding: 8px;
+    background-color: $white;
+    border-radius: 0px;
+    appearance: none;
+    border: 1px solid $grey;
+    @include background-rgba($white, .8);
+    transition: all .2s;
+    &:focus {
+      outline: 0;
+      border-color: $gold;
+    }
+  }
+}
+.reservations-submit {
+  padding: .875rem 2.5rem;
+}
+
+// Reservations Block Animations
+.reservations-block.active {
+  .reservation-block-img {
+    &:first-child {
+      @include animate;
+      animation-delay: 0.2s;
+      @extend .fade-in-left;      
+    }
+    @include animate;
+    animation-delay: 0.3s;
+    @extend .fade-in-left;
+  }
+  .reservation-block-form {
+    @include animate;
+    animation-delay: 0.4s;
+    @extend .fade-in-left; 
+  }
+}
+
+// Contact
+.reservations-form-wrap {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}

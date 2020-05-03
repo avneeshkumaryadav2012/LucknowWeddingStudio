@@ -1,0 +1,52 @@
+// Banner
+.banner {
+  background: url(/img/hero-bg.jpg) 0 0 no-repeat #111;
+  background-size: cover;
+}
+
+// Banner Heading
+.banner-lead {
+  color: $white;
+  font-weight: 400;
+  &:after {
+    content: '';
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: url(/img/divider-xl-white.svg) 50% 50% no-repeat;
+    height: 55px;
+    margin: 20px auto 0 auto;
+    @include animate;
+    animation-delay: 1s;
+    @extend .fade-in;
+  }
+  @include breakpoint(l) {
+    font-size: 70px;
+    line-height: 90px;
+  }
+  @include breakpoint(xl) {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+.banner-lead-1,
+.banner-lead-2 {
+  @include animate;
+  @extend .fade-in;
+  @include breakpoint(m) {
+    display: block;
+  }
+}
+.banner-lead-1 { animation-delay: .4s; }
+.banner-lead-2 { animation-delay: .8s; }
+
+// Banner Buttons
+.banner-buttons {
+  @include animate;
+  animation-delay: 1.4s;
+  @extend .fade-in;
+  .button {
+    margin: .25rem;
+  }
+}

@@ -1,0 +1,44 @@
+// Footer
+.footer {
+  color: $grey;
+  background: $darkest-grey;
+}
+.footer strong {
+  color: $white;
+}
+.footer-heading {
+  color: $white;
+  &:after {
+    content: '';
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: url(/img/divider-sm-white.svg) 50% 50% no-repeat;
+    height: 30px;
+    margin-top: 16px;
+  }
+}
+
+.footer-column {
+  border-bottom: 1px solid $grey;
+}
+
+@include breakpoint(m) {
+  .footer-column {
+    border-bottom-color: transparent;
+  }
+}
+
+.social-twitter {
+  &:hover { background-image: url(/img/twitter-gold.svg); } 
+}
+.social-facebook{
+  &:hover { background-image: url(/img/facebook-gold.svg); }
+}
+.social-google-plus{
+  &:hover { background-image: url(/img/google-plus-gold.svg); }
+}
+.social-youtube{
+  &:hover { background-image: url(/img/youtube-gold.svg); }
+}

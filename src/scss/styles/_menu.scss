@@ -1,0 +1,48 @@
+// Food Menu Block
+.food-menu-block { background: url(/img/cream-pixels.png) 0 0 repeat $grey; }
+.food-menu-content {
+  @include breakpoint(m) {
+    float: left;
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.food-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .food-menu-item-special {
+    border: 1px solid $special-gold;
+    position: relative;
+    &:after {
+      font-size: 13px;
+      line-height: 30px;
+      content: "Special";
+      display: block;
+      position: absolute;
+      height: 30px;
+      top: -30px;
+      right: -1px;
+      font-weight: 700;
+      padding: 0 5px;
+      @include background-rgba($soft-gold, .8);
+      color: $white;
+    }
+  }
+}
+.food-menu-heading {
+  border-bottom: 1px solid $special-gold;
+}
+
+// Food Menu Block Animations
+.food-menu-block.active {
+  .food-menu-content {
+    &:first-child {
+      @include animate;
+      @extend .fade-in-left;
+    }
+    @include animate;
+    @extend .fade-in-right;
+  }
+}
